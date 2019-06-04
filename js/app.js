@@ -18,6 +18,17 @@
 
 function switchImage(){
 	console.log(this);
+
+//grab corresponding bgd image (0, 1, 2 or 3) and get it from the images folder (background1.jpg as an example)
+	let bgImage = `./images/backGround${this.dataset.puzzleref}.jpg`;
+
+
+	//set the background image style on the dropzone container
+	puzzleBoard.style.backgroundImage = `url(${bgImage})`;
+
+
+
+//	debugger;
 }
 	puzzleSelectors.forEach(thumbnail => {
 		thumbnail.addEventListener("click", switchImage);
